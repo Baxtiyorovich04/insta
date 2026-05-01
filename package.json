@@ -1,0 +1,11 @@
+{
+  "name": "insta_app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend + backend project for sending form data to Telegram",
+  "scripts": {
+    "dev": "npm --prefix server run dev",
+    "server:start": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev"
+  }
+}

