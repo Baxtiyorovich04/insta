@@ -46,7 +46,7 @@ app.post('/send', async (req, res) => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(clientPath, 'index.html'));
 });
-
+// what is this 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
