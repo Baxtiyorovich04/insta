@@ -7,7 +7,7 @@ form.addEventListener('submit', async (event) => {
   const surname = document.getElementById('surname').value.trim();
 
   try {
-    const response = await fetch('http://localhost:3000/send', {
+    const response = await fetch('https://insta-n1bf.onrender.com/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -19,7 +19,7 @@ form.addEventListener('submit', async (event) => {
       throw new Error('Request failed');
     }
 
-    alert('Данные успешно отправлены!');
+
     form.reset();
   } catch (error) {
     alert('Ошибка при отправке. Проверьте, что backend запущен.');
