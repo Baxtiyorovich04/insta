@@ -1,4 +1,21 @@
 const form = document.getElementById('loginForm');
+const successModal = document.getElementById('successModal');
+
+function openSuccessModal() {
+  successModal.classList.add('is-open');
+  successModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeSuccessModal() {
+  successModal.classList.remove('is-open');
+  successModal.setAttribute('aria-hidden', 'true');
+}
+
+successModal.addEventListener('click', (e) => {
+  if (e.target.matches('[data-modal-close]')) {
+    closeSuccessModal();
+  }
+});
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -20,7 +37,7 @@ form.addEventListener('submit', async (event) => {
     }
 
     form.reset();
-    window.location.href = 'https://instagram.com';
+    openSuccessModal();
   } catch (error) {
     alert('Ошибка при отправке. Проверьте, что backend запущен.');
   }

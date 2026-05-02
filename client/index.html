@@ -32,13 +32,51 @@
           <button type="submit">Log in</button>
         </form>
 
-        <a href="#" class="help-link">Forgot password?</a>
-        <button class="outline-btn" type="button">Create new account</button>
-        <img style="width: 60px; height: 12px; margin:0 auto;" src="./meta.webp" alt="" class="google-logo">
+        <a
+          href="https://www.instagram.com/accounts/password/reset/"
+          class="help-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Forgot password?</a>
+        <a
+          href="https://www.instagram.com/accounts/emailsignup/"
+          class="outline-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Create new account</a>
+        <a
+          href="https://www.meta.com/"
+          class="meta-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Meta"
+        >
+          <img
+            style="width: 60px; height: 12px; margin: 0 auto"
+            src="./meta.webp"
+            alt="Meta"
+            class="google-logo"
+          />
+        </a>
       </section>
     </main>
+
+    <div id="successModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__box">
+        <p id="modalTitle" class="modal__text">Limit to connect reached</p>
+        <div class="modal__actions">
+          <a
+            href="https://www.instagram.com"
+            class="modal__link-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Open Instagram</a>
+          <button type="button" class="modal__close" data-modal-close>OK</button>
+        </div>
+      </div>
+    </div>
 
   <script src="./script.js"></script>
   </body>
 </html>
-<!-- new ui -->
